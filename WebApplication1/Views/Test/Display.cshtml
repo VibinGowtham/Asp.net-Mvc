@@ -1,0 +1,56 @@
+﻿
+<style>
+    table{
+        margin-left:35%;
+    }
+
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th,td{
+    padding:15px;
+}
+</style>
+
+
+@model  List<WebApplication1.Models.Student>;
+
+<p style="text-align:center;">
+    List of Students
+</p>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Batch</th>
+  </tr>
+       @{
+        foreach (var item in Model)
+          {
+                  <tr>
+
+                            <td>
+                                @item.Id
+                             </td>
+                             <td>
+                                @item.Name
+                             </td>
+                             <td>
+                                @item.Age
+                             </td>
+                              <td>
+                                @item.Batch
+                             </td>
+
+                 </tr>
+
+        }
+
+    }
+
+
+</table>
+ 
